@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Terapia psicológica online y presencial para ansiedad, estrés y depresión. Primera sesión gratuita. Psicóloga especializada con enfoque humanista."
+    />
+    <meta
+      name="keywords"
+      content="psicólogo online, terapia psicológica, ansiedad, depresión, terapia online, sesión psicólogo"
+    />
+    <meta name="author" content="Yuriko Cano" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Terapia Psicológica - Sesión Gratuita" />
+    <meta
+      property="og:description"
+      content="Empieza tu camino hacia el bienestar emocional con sesión inicial sin costo."
+    />
+    <meta property="og:type" content="website" />
+    <title>
+      Terapia Psicológica Online | Yuriko Cano | Primera Sesión Gratis
+    </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #4a7c6e;
+        --secondary-color: #6a9e92;
+        --accent-color: #d9a574;
+        --light-bg: #f9f7f4;
+        --text-dark: #2c3e3d;
+        --text-light: #5a6b6a;
+        --border-color: #e8ddd3;
+        --success-color: #4a7c6e;
+        --light-teal: #e8f3f1;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", "Roboto", sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      /* TYPOGRAPHY */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+
+      h2 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+      }
+
+      h3 {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--text-light);
+        font-size: clamp(0.95rem, 2vw, 1.1rem);
+      }
+
+      /* BUTTONS */
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        box-shadow: 0 4px 12px rgba(74, 124, 110, 0.3);
+      }
+
+      .btn-primary:hover {
+        background-color: #3a6a5e;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(74, 124, 110, 0.4);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* CONTAINERS */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-alt {
+        background-color: var(--light-bg);
+      }
+
+      /* HERO SECTION */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 100px 1.5rem;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        color: white;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      .hero .subtitle {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .hero-buttons {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--primary-color);
+      }
+
+      .btn-white:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      /* FEATURES GRID */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(44, 62, 61, 0.08);
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .feature-card:hover {
+        box-shadow: 0 8px 24px rgba(44, 62, 61, 0.15);
+        transform: translateY(-4px);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      /* CONTENT SECTIONS */
+      .content-section {
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+        padding-bottom: 1.5rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+      }
+
+      .benefits-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .benefits-list li {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .benefit-icon {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        flex-shrink: 0;
+        margin-top: 0.25rem;
+      }
+
+      /* TESTIMONIALS */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary-color);
+        box-shadow: 0 2px 8px rgba(44, 62, 61, 0.08);
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      .author-info {
+        flex: 1;
+      }
+
+      .author-name {
+        font-weight: 600;
+        color: var(--text-dark);
+        margin: 0;
+      }
+
+      .author-condition {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin: 0;
+      }
+
+      /* FAQ SECTION */
+      .faq-container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 4px 12px rgba(44, 62, 61, 0.1);
+      }
+
+      .faq-question {
+        padding: 1.5rem;
+        background-color: var(--light-bg);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: var(--text-dark);
+        border: none;
+        width: 100%;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #f0e8e0;
+        color: var(--primary-color);
+      }
+
+      .faq-toggle {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-toggle {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 1.5rem;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        padding: 1.5rem;
+      }
+
+      .faq-answer p {
+        margin: 0;
+      }
+
+      /* FORM STYLES */
+      .form-section {
+        background: linear-gradient(
+          135deg,
+          var(--light-teal) 0%,
+          rgba(232, 243, 241, 0.5) 100%
+        );
+        padding: 60px 1.5rem;
+        text-align: center;
+      }
+
+      .form-container {
+        max-width: 550px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--text-dark);
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 0.875rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        background-color: rgba(74, 124, 110, 0.02);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .form-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .form-checkbox input[type="checkbox"] {
+        width: auto;
+        cursor: pointer;
+      }
+
+      .form-submit {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      /* CTA SECTION */
+      .cta-final {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 60px 1.5rem;
+        text-align: center;
+      }
+
+      .cta-final h2 {
+        color: white;
+      }
+
+      .cta-final p {
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: var(--text-dark);
+        color: white;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* UTILITIES */
+      .text-center {
+        text-align: center;
+      }
+
+      .mt-2 {
+        margin-top: 2rem;
+      }
+
+      .mt-3 {
+        margin-top: 3rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 2rem;
+      }
+
+      .mb-3 {
+        margin-bottom: 3rem;
+      }
+
+      .text-muted {
+        color: var(--text-light);
+      }
+
+      .highlight {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      /* STARS */
+      .stars {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .section {
+          padding: 50px 0;
+        }
+
+        .hero {
+          padding: 60px 1.5rem;
+          min-height: auto;
+        }
+
+        .hero-buttons {
+          width: 100%;
+        }
+
+        .hero-buttons .btn {
+          width: 100%;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .section-title::after {
+          width: 40px;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 1rem;
+        }
+
+        .btn {
+          padding: 0.875rem 1.5rem;
+          font-size: 0.95rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+        }
+
+        .hero-icon {
+          font-size: 2.5rem;
+        }
+
+        .feature-icon {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      /* ACCESSIBILITY */
+      .skip-to-main {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 100;
+      }
+
+      .skip-to-main:focus {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-icon">💚</div>
+        <h1>Tu bienestar emocional es mi prioridad</h1>
+        <p class="subtitle">
+          Terapia psicológica profesional, empática y sin juzgamientos. Empieza
+          tu camino hacia la paz mental con tu
+          <span class="highlight">primera sesión gratuita</span>
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact-form" class="btn btn-white"
+            >Solicita tu sesión gratuita</a
+          >
+          <a href="#how-it-works" class="btn btn-secondary">¿Cómo funciona?</a>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <!-- ABOUT SECTION -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-title">
+            <h2>¿Qué es la terapia psicológica y por qué es importante?</h2>
+          </div>
+          <div class="content-section">
+            <p>
+              La terapia psicológica es un espacio seguro, confidencial y
+              profesional donde puedes explorar tus emociones, pensamientos y
+              comportamientos. No se trata de "estar loco/a" ni es algo
+              vergonzoso:
+              <strong
+                >es un acto de amor y responsabilidad contigo mismo.</strong
+              >
+            </p>
+            <p>
+              Muchas personas experimentan ansiedad, estrés, depresión o
+              dificultades emocionales en algún momento de sus vidas. Una
+              terapia adecuada te ayuda a entender qué está pasando, desarrollar
+              herramientas prácticas y recuperar tu bienestar.
+            </p>
+            <p><strong>¿Por qué es importante para ti?</strong></p>
+            <ul class="benefits-list">
+              <li>
+                <span class="benefit-icon">✓</span>
+                <div>
+                  <strong>Resultados reales:</strong> Aprenderás a manejar
+                  estrés y ansiedad con técnicas comprobadas
+                </div>
+              </li>
+              <li>
+                <span class="benefit-icon">✓</span>
+                <div>
+                  <strong>Autoconocimiento:</strong> Entenderás mejor tus
+                  patrones emocionales y actuarás desde la consciencia
+                </div>
+              </li>
+              <li>
+                <span class="benefit-icon">✓</span>
+                <div>
+                  <strong>Relaciones más saludables:</strong> Mejora cómo te
+                  relacionas con los demás
+                </div>
+              </li>
+              <li>
+                <span class="benefit-icon">✓</span>
+                <div>
+                  <strong>Empoderamiento:</strong> Tendrás herramientas para
+                  enfrentar desafíos futuros
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS SECTION -->
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-title">
+            <h2>Beneficios que obtendrás</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Resultados medibles</h3>
+              <p>
+                Verás cambios reales en tu bienestar, reducción de ansiedad y
+                mejor manejo emocional desde las primeras sesiones.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <h3>Espacio seguro y confidencial</h3>
+              <p>
+                Un lugar sin juzgamientos donde puedes ser completamente
+                honesto/a contigo mismo y conmigo.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⏰</div>
+              <h3>Flexibilidad y comodidad</h3>
+              <p>
+                Sesiones online o presenciales, adaptadas a tu horario. Desde
+                casa o en consulta, tú eliges.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💡</div>
+              <h3>Herramientas prácticas</h3>
+              <p>
+                Aprenderás técnicas que puedes usar en tu día a día para manejar
+                estrés, ansiedad y emociones difíciles.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📈</div>
+              <h3>Crecimiento personal</h3>
+              <p>
+                No solo resolvemos problemas, sino que trabajamos en tu
+                desarrollo emocional y personal.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💼</div>
+              <h3>Profesionalismo</h3>
+              <p>
+                Terapia basada en evidencia científica con metodología humanista
+                y empática.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-title">
+            <h2>Cómo funcionan nuestras sesiones</h2>
+          </div>
+          <div class="content-section">
+            <div
+              style="
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                margin-bottom: 2rem;
+                border-left: 4px solid var(--primary-color);
+              "
+            >
+              <h3 style="color: var(--primary-color); margin-top: 0">
+                Sesiones online
+              </h3>
+              <p>
+                Desde la comodidad de tu hogar, con máxima privacidad.
+                Utilizamos una plataforma segura y encriptada. Perfecta si
+                tienes poco tiempo o vives en otra ciudad.
+              </p>
+              <p>
+                <strong>Duración:</strong> 50 minutos |
+                <strong>Frecuencia:</strong> Semanal o quincenal |
+                <strong>Horarios flexibles</strong>
+              </p>
+            </div>
+
+            <div
+              style="
+                background: white;
+                padding: 2rem;
+                border-radius: 12px;
+                border-left: 4px solid var(--secondary-color);
+              "
+            >
+              <h3 style="color: var(--secondary-color); margin-top: 0">
+                Sesiones presenciales
+              </h3>
+              <p>
+                En un ambiente tranquilo y profesional, diseñado para tu
+                comodidad. Ideal si prefieres el contacto directo y una
+                experiencia más personal.
+              </p>
+              <p>
+                <strong>Duración:</strong> 50 minutos |
+                <strong>Frecuencia:</strong> Semanal o quincenal |
+                <strong>Ubicación accesible</strong>
+              </p>
+            </div>
+
+            <div
+              style="
+                margin-top: 2rem;
+                background: var(--light-bg);
+                padding: 2rem;
+                border-radius: 12px;
+              "
+            >
+              <h3 style="text-align: center">Proceso simple y transparente</h3>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                  gap: 1rem;
+                  margin-top: 2rem;
+                  text-align: center;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      font-size: 2rem;
+                      color: var(--primary-color);
+                      font-weight: 700;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    1
+                  </div>
+                  <strong>Primera sesión</strong>
+                  <p style="font-size: 0.9rem">
+                    Completamente gratuita. Nos conocemos.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 2rem;
+                      color: var(--primary-color);
+                      font-weight: 700;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    2
+                  </div>
+                  <strong>Evaluación</strong>
+                  <p style="font-size: 0.9rem">
+                    Entiendo tu situación y tus necesidades.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 2rem;
+                      color: var(--primary-color);
+                      font-weight: 700;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    3
+                  </div>
+                  <strong>Plan personalizado</strong>
+                  <p style="font-size: 0.9rem">
+                    Diseñamos juntos tu proceso terapéutico.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-size: 2rem;
+                      color: var(--primary-color);
+                      font-weight: 700;
+                      margin-bottom: 0.5rem;
+                    "
+                  >
+                    4
+                  </div>
+                  <strong>Seguimiento</strong>
+                  <p style="font-size: 0.9rem">
+                    Sesiones regulares con apoyo continuo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Lo que dicen nuestros clientes</h2>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Llevaba años con ansiedad sin saber cómo manejarla. Las
+                sesiones me dieron herramientas reales que uso cada día. Me
+                siento más tranquilo y en control de mis emociones."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MC</div>
+                <div class="author-info">
+                  <p class="author-name">Marcos C.</p>
+                  <p class="author-condition">Ansiedad, estrés laboral</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Pensé que la depresión era parte de mí. Gracias a la terapia
+                descubrí que puedo cambiar cómo pienso y siento. Yuriko es
+                empática, profesional y realmente se interesa en tu progreso."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SG</div>
+                <div class="author-info">
+                  <p class="author-name">Sofia G.</p>
+                  <p class="author-condition">Depresión, baja autoestima</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Excelente profesional. Las sesiones online me facilitaron mucho
+                la vida. Ahora tengo mejores relaciones y me entiende mejor a mí
+                misma. Totalmente recomendado."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">LM</div>
+                <div class="author-info">
+                  <p class="author-name">Laura M.</p>
+                  <p class="author-condition">Relaciones personales</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-title">
+            <h2>Preguntas frecuentes</h2>
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Cómo funciona una sesión de terapia?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Una sesión típica dura 50 minutos. Empezamos creando un
+                  espacio seguro donde puedas expresarte libremente. Exploraré
+                  tu situación, escucharé activamente sin juzgar, y juntos
+                  trabajaremos en estrategias y soluciones personalizadas. El
+                  proceso es colaborativo: tú tienes la experiencia vivida, yo
+                  tengo las herramientas profesionales.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Es confidencial lo que hablo en terapia?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Sí, 100%. El secreto profesional es un principio fundamental
+                  en psicología. Todo lo que compartas conmigo está protegido
+                  legalmente. Las únicas excepciones son situaciones de riesgo
+                  inminente (riesgo de daño a ti mismo o a otros), como requiere
+                  la ley. Tu privacidad es sagrada.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Cuántas sesiones necesito?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Depende de tu situación particular. Algunas personas ven
+                  resultados en 4-6 sesiones, otras necesitan más tiempo. No hay
+                  una fórmula única. Lo que hacemos es evaluar en la primera
+                  sesión y luego establecer un plan realista contigo. Algunos
+                  clientes vienen para terapia breve y específica, otros
+                  prefieren apoyo a largo plazo. Tú decides qué es mejor para
+                  ti.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span
+                  >¿Qué diferencia hay entre terapia online y presencial?</span
+                >
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Ambas modalidades son efectivas. La terapia online ofrece
+                  comodidad, flexibilidad y es ideal si tienes poco tiempo o
+                  vives lejos. La terapia presencial permite más conexión
+                  personal y observo mejor tu lenguaje corporal. Muchos clientes
+                  comienzan online y luego prefieren presencial o viceversa.
+                  Probamos y ajustamos según lo que te funcione mejor.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Cuál es el costo de las sesiones?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  La primera sesión es completamente gratuita. Después, el costo
+                  por sesión está diseñado para ser accesible sin comprometer la
+                  calidad. Ofrezco diferentes opciones según tu presupuesto y te
+                  daré precios claros durante nuestra primera conversación. No
+                  hay sorpresas ni costos ocultos.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Tengo que dejar la medicación si voy a terapia?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No. Yo soy psicóloga, no psiquiatra. Si estás bajo medicación,
+                  es importante que continúes con tu médico. La terapia
+                  psicológica y la medicación pueden trabajar juntas de manera
+                  complementaria. Si tu médico prescribió medicamentos, él es
+                  quién decide si es necesario continuar o ajustar. Nosotros
+                  trabajamos en coordinación con tu equipo médico para tu máximo
+                  beneficio.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Qué pasa si no me siento cómodo en la terapia?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Es totalmente válido. La relación terapéutica es importante.
+                  Si sientes que no conectamos, podemos hablar abiertamente
+                  sobre ello o puedo recomendarte otro profesional. Tu comodidad
+                  y confianza son prioritarios. Algunos clientes necesitan
+                  cambiar de terapeuta y eso está bien, no significa que haya un
+                  problema contigo ni conmigo.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Cuál es mi enfoque terapéutico?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Utilizo un enfoque humanista-integrativo, combinando técnicas
+                  psicológicas basadas en evidencia: terapia
+                  cognitivo-conductual, mindfulness, gestalt y trabajo con
+                  emociones. No hay una talla única para todos. Adapto mi estilo
+                  a ti, a tu ritmo y a lo que funciona para tu caso específico.
+                  Lo importante es que sintamos progreso y te sientas
+                  respaldado/a.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">
+                <span>¿Cómo empiezo?</span>
+                <span class="faq-toggle">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Es muy simple. Completa el formulario en esta página con tu
+                  nombre, correo y una breve descripción de lo que te trae aquí.
+                  Me pondré en contacto contigo en máximo 24 horas para agendar
+                  tu primera sesión gratuita. No hay compromiso más allá de esa
+                  conversación inicial. ¿Listo para empezar?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM SECTION -->
+      <section class="form-section" id="contact-form">
+        <div class="form-container">
+          <div class="section-title" style="text-align: center">
+            <h2>Reserva tu sesión gratuita ahora</h2>
+            <p>Sin compromiso. Solo necesito algunos datos para contactarte.</p>
+          </div>
+          <form
+            id="contact-form-element"
+            method="POST"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          >
+            <div class="form-group">
+              <label for="name">Nombre completo *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="tu@correo.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono (opcional)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+34 XXX XXX XXX"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="issue">¿Qué te trae aquí? *</label>
+              <select id="issue" name="issue" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="ansiedad">Ansiedad</option>
+                <option value="estres">Estrés</option>
+                <option value="depresion">Depresión</option>
+                <option value="relaciones">Dificultades en relaciones</option>
+                <option value="autoestima">Baja autoestima</option>
+                <option value="estres-laboral">Estrés laboral</option>
+                <option value="duelo">Duelo y pérdidas</option>
+                <option value="otro">
+                  Otro / Prefiero contar en la sesión
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >Cuéntame brevemente tu situación (opcional)</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Comparte lo que te parezca relevante. Esto me ayudará a preparar mejor tu primera sesión."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="modality">¿Qué modalidad prefieres? *</label>
+              <select id="modality" name="modality" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+                <option value="flexible">Sin importar (flexible)</option>
+              </select>
+            </div>
+
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy" style="margin: 0"
+                >He leído y acepto la
+                <a
+                  href="#"
+                  style="
+                    color: var(--primary-color);
+                    text-decoration: underline;
+                  "
+                  >política de privacidad</a
+                >
+                *</label
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Solicita tu sesión gratuita
+            </button>
+
+            <p
+              style="
+                font-size: 0.85rem;
+                color: var(--text-light);
+                margin-top: 1rem;
+                text-align: center;
+              "
+            >
+              Nos pondremos en contacto en máximo 24 horas.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- FINAL CTA SECTION -->
+      <section class="cta-final">
+        <div class="container">
+          <h2>Tu bienestar mental es importante</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 2rem">
+            No esperes más para sentirte mejor. Toma el primer paso hoy mismo.
+          </p>
+          <a href="#contact-form" class="btn btn-white"
+            >Reserva ahora tu sesión gratuita</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Yuriko Cano, Psicóloga. Todos los derechos reservados.
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.85rem">
+          Email: <a href="mailto:contacto@yuriko.com">contacto@yuriko.com</a>
+        </p>
+        <p
+          style="
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+          "
+        >
+          Nota: Este sitio es solo informativo. No reemplaza la evaluación
+          profesional en caso de emergencia.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // FAQ Toggle
+      function toggleFaq(button) {
+        const item = button.parentElement;
+        item.classList.toggle("active");
+      }
+
+      // Close FAQ when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".faq-item")) {
+          document.querySelectorAll(".faq-item.active").forEach((item) => {
+            item.classList.remove("active");
+          });
+        }
+      });
+
+      // Form Validation (Basic)
+      document
+        .getElementById("contact-form-element")
+        .addEventListener("submit", function (e) {
+          const email = document.getElementById("email").value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!emailRegex.test(email)) {
+            alert("Por favor ingresa un correo válido");
+            e.preventDefault();
+            return false;
+          }
+        });
+
+      // Smooth scroll behavior
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href !== "#" && document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for fade-in animation
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".feature-card, .testimonial-card, .faq-item")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
