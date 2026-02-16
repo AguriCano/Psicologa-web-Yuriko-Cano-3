@@ -8,6 +8,7 @@ Una **landing page HTML5 completamente funcional, responsiva y optimizada** para
 
 ## ✨ Características Principales
 
+✅ **Navbar Responsivo** - Menú hamburguesa profesional en móviles ⭐ NUEVO  
 ✅ **100% Responsivo** - Funciona perfecto en móvil, tablet y desktop  
 ✅ **SEO Optimizado** - Estructura correcta, meta tags, palabras clave  
 ✅ **CRO Optimizado** - Diseñado para convertir visitas en contactos  
@@ -30,7 +31,8 @@ Psicologa-web Yuriko Cano 3/
 │   ├── 📁 css/
 │   │   └── styles.css                    # Todos los estilos
 │   └── 📁 js/
-│       └── script.js                     # Toda la interactividad
+│       ├── navbar.js                     # Menú hamburguesa ⭐ NUEVO
+│       └── script.js                     # FAQ, formularios, animaciones
 │
 ├── 📖 README.md                           # Este archivo (guía rápida)
 ├── 📖 PERSONALIZACION_RAPIDA_5_PASOS.md  # Personalizar en 15 min

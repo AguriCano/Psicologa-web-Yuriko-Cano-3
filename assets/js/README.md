@@ -1,6 +1,18 @@
 # ⚙️ JavaScript - Funcionalidad
 
-Archivo principal: `script.js`
+Archivos principales: `script.js` y `navbar.js`
+
+## 📋 Archivos JavaScript
+
+### `script.js`
+
+Funcionalidad general del sitio (FAQ, formularios, animaciones)
+
+### `navbar.js` ⭐ NUEVO
+
+Funcionalidad del menú hamburguesa responsivo
+
+---
 
 ## 📋 Funciones Implementadas
 
@@ -204,16 +216,109 @@ console.log("Form submitted");
 
 ## ⚡ Rendimiento
 
-- ✅ Solo 60 líneas de código
+- ✅ Múltiples módulos separados (~60 líneas cada uno)
 - ✅ Sin librerías externas
 - ✅ Ejecución rápida
 - ✅ Bajo consumo de memoria
+- ✅ Organización profesional
 
-## 🚀 Próximos Pasos
+---
+
+## 🎯 navbar.js - Menú Hamburguesa Responsivo
+
+Archivo: `navbar.js`
+
+### Qué hace:
+
+1. **Toggle del Hamburguesa** - Abre/cierra menú
+2. **Cierre automático** - Menú se cierra al elegir opción
+3. **Scroll inteligente** - Navbar sube/baja al scrollear
+4. **Click fuera** - Cierra menú cuando haces click exterior
+
+### Funciones Principales:
+
+```javascript
+toggleHamburger(); // Abre/cierra menú
+closeMenu(); // Cierra el menú
+```
+
+### Cómo se usa:
+
+En HTML, el navbar usa estas clases:
+
+```html
+<!-- Logo y menú -->
+<nav class="navbar">
+  <div class="navbar-logo">...</div>
+  <ul class="nav-menu">
+    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+  </ul>
+  <!-- Hamburguesa -->
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+```
+
+### Modificar comportamiento:
+
+**Cambiar velocidad de scroll detection:**
+
+```javascript
+// En navbar.js, línea ~50
+window.addEventListener("scroll", () => {
+  // Ajusta el threshold si lo necesitas
+});
+```
+
+**Cambiar altura del navbar:**
+
+```css
+/* En styles.css */
+.navbar {
+  top: 0;
+  height: 70px; /* ← Cambia este valor */
+}
+```
+
+### Responsive Breakpoints:
+
+- **Desktop** (>768px): Menú visible horizontal
+- **Tablet** (768px): Menú hamburguesa aparece
+- **Mobile** (<480px): Menú más compacto
+
+---
+
+## 🚀 Estructura de Módulos
+
+```
+assets/js/
+├── navbar.js      ← Navegación y hamburguesa
+├── script.js      ← FAQ, formularios, animaciones
+└── README.md      ← Este archivo
+```
+
+### Para agregar más funcionalidad:
+
+1. Crea archivo nuevo (ej: `carousel.js`)
+2. Agrégalo en `index.html`
+   ```html
+   <script src="assets/js/navbar.js"></script>
+   <script src="assets/js/carousel.js"></script>
+   <!-- NUEVO -->
+   <script src="assets/js/script.js"></script>
+   ```
+3. Documenta en este README
+
+---
+
+## 📚 Próximos Pasos
 
 **Para escalar:**
 
-1. Divide en módulos (faq.js, forms.js)
+1. ✅ Divide en módulos (navbar.js, forms.js, animations.js)
 2. Sistema de eventos personalizado
 3. Manejo de errores mejorado
 4. Analytics (Google Tag Manager)
