@@ -4,12 +4,25 @@ Si no tienes tiempo de leer todo, aquí está el **TL;DR** para poner tu landing
 
 ---
 
-## PASO 1: Abre el archivo `index.html` (2 minutos)
+## PASO 1: Abre los archivos (1 minuto)
 
-1. Busca la carpeta: `Psicologa-web Yuriko Cano 3`
-2. Haz click derecho en `index.html`
-3. "Abrir con" → **VS Code** o **Notepad++** o tu editor favorito
-4. ¡Listo!
+Tu landing page ahora está **organizada en carpetas profesionales**:
+
+```
+Psicologa-web Yuriko Cano 3/
+├── index.html              ← HTML (contenido)
+├── assets/
+│   ├── css/styles.css      ← Diseño (colores, espacios)
+│   └── js/script.js        ← Interacción (botones, FAQ)
+```
+
+Abre estos archivos con tu editor (VS Code, Notepad++, etc):
+
+1. **`index.html`** - Cambiar nombre, email, teléfono, contenido
+2. **`assets/css/styles.css`** - Cambiar colores (opcional)
+3. **`assets/js/script.js`** - Modificar JavaScript (avanzado)
+
+**Para esta guía rápida, solo necesitas `index.html`.**
 
 ---
 
@@ -186,21 +199,22 @@ Ver documento: `INSTRUCCIONES_DEPLOY.md`
 
 ---
 
-## 🎨 BONUS: Cambiar Colores (Opcional)
+## 🎨 BONUS: Cambiar Colores (Avanzado)
 
 Si quieres otros colores (por defecto son verde salvia):
 
-1. Busca en tu `index.html`:
+1. Abre: **`assets/css/styles.css`**
+2. Busca (Ctrl+F) al inicio la sección `:root`:
 
 ```css
 :root {
-  --primary-color: #4a7c6e; /* Verde salvia */
-  --secondary-color: #6a9e92; /* Verde secundario */
-  --accent-color: #d9a574; /* Beige */
+  --primary-color: #4a7c6e; /* Verde salvia → Tu color */
+  --secondary-color: #6a9e92; /* Verde secundario → Tu color */
+  --accent-color: #d9a574; /* Beige → Tu color */
 }
 ```
 
-2. Reemplaza los códigos `#4a7c6e`, `#6a9e92`, `#d9a574` con tus colores
+3. Reemplaza los códigos `#4a7c6e`, `#6a9e92`, `#d9a574` con tus colores
 
 **Herramienta para elegir colores:**
 
@@ -215,7 +229,7 @@ Si quieres otros colores (por defecto son verde salvia):
 | Terapia General | `#4a7c6e` (Verde)       | `#6a9e92`              | Equilibrio, calma |
 | Ansiedad        | `#5b9bd5` (Azul)        | `#70ad47` (Azul-verde) | Relajación        |
 | Depresión       | `#9966cc` (Púrpura)     | `#cc99ff`              | Energía, cambio   |
-| Duelo           | `#8b7777` (Gris cálido) | `#a B9a88`             | Calma, respeto    |
+| Duelo           | `#8b7777` (Gris cálido) | `#aba988`              | Calma, respeto    |
 
 ---
 

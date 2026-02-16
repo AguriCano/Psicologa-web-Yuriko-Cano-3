@@ -24,17 +24,29 @@ Una **landing page HTML5 completamente funcional, responsiva y optimizada** para
 ```
 Psicologa-web Yuriko Cano 3/
 │
-├── index.html                          # Landing page principal (TODO el código)
-├── README.md                           # Este archivo
-├── GUIA_DISENO_Y_PERSONALIZACION.md   # Guía completa de personalización
-├── POLITICA_PRIVACIDAD_PLANTILLA.md   # Plantilla de política de privacidad
-├── COPYWRITING_AVANZADO.md             # Tips de microcopy y copywriting
-├── INSTRUCCIONES_DEPLOY.md             # Cómo subir a producción
+├── 📄 index.html                          # Tu landing page (HTML puro)
 │
-└── (Opcional) assets/
-    └── logo.png                        # Tu logo
-    └── 1200x630-preview.png           # Preview para redes sociales
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   └── styles.css                    # Todos los estilos
+│   └── 📁 js/
+│       └── script.js                     # Toda la interactividad
+│
+├── 📖 README.md                           # Este archivo (guía rápida)
+├── 📖 PERSONALIZACION_RAPIDA_5_PASOS.md  # Personalizar en 15 min
+├── 📖 GUIA_DISENO_Y_PERSONALIZACION.md   # Referencia profunda
+├── 📖 COPYWRITING_AVANZADO.md             # Estrategia de textos
+├── 📖 POLITICA_PRIVACIDAD_PLANTILLA.md    # Plantilla legal
+├── 📖 INSTRUCCIONES_DEPLOY.md             # Cómo publicar
+└── 📖 INDICE_COMPLETO.md                  # Resumen de todo
 ```
+
+**Ventajas de esta estructura:**
+
+- ✅ Código limpio y organizado
+- ✅ Fácil de mantener
+- ✅ Profesional y escalable
+- ✅ Prácticas web modernas
 
 ---
 
